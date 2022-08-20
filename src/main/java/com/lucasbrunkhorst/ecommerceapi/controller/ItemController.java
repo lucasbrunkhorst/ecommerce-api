@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class ItemController extends CrudController<Item, ItemRequestDto> {
 
-   private final ItemService itemService;
+    private final ItemService itemService;
 
     @Override
     public CrudService<Item> getService() {

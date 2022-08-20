@@ -15,7 +15,11 @@ public abstract class CrudServiceImpl<T> implements CrudService<T> {
 
     @Override
     public T save(T entity) {
+        preSave(entity);
         return getRepository().save(entity);
+    }
+
+    protected void preSave(T entity) {
     }
 
     @Override
