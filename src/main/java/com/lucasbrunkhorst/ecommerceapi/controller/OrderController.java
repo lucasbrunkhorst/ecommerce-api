@@ -85,4 +85,9 @@ public class OrderController extends CrudController<Order, OrderRequestDto> {
         return order.getItems();
     }
 
+    @PutMapping("{uuid}/close")
+    public Order close(@PathVariable("uuid") String uuid) {
+        return orderService.close(uuid);
+    }
+
 }

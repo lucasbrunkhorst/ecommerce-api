@@ -28,7 +28,6 @@ public abstract class CrudServiceImpl<T> implements CrudService<T> {
                 .orElseThrow(() -> getNoResultException(uuid));
     }
 
-
     @Override
     public void delete(String uuid) {
         if (!getRepository().existsById(uuid)) {
