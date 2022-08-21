@@ -1,6 +1,5 @@
 package com.lucasbrunkhorst.ecommerceapi.controller;
 
-import com.lucasbrunkhorst.ecommerceapi.entity.Item;
 import com.lucasbrunkhorst.ecommerceapi.service.CrudService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

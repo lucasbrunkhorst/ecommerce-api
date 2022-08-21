@@ -1,6 +1,7 @@
 package com.lucasbrunkhorst.ecommerceapi.service.impl;
 
 import com.lucasbrunkhorst.ecommerceapi.entity.Order;
+import com.lucasbrunkhorst.ecommerceapi.entity.OrderItem;
 import com.lucasbrunkhorst.ecommerceapi.repository.OrderRepository;
 import com.lucasbrunkhorst.ecommerceapi.service.OrderService;
 import lombok.RequiredArgsConstructor;
@@ -22,6 +23,9 @@ public class OrderServiceImpl extends CrudServiceImpl<Order> implements OrderSer
 
     @Override
     protected void preSave(Order entity) {
-       entity.setTotalValue(BigDecimal.ZERO); // todo, consertar valor total dos itens do pedido
+        BigDecimal totalValue = entity.getItems().stream()
+                .map(OrderItem::getValue)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+        entity.setTotalValue(totalValue);
     }
 }
