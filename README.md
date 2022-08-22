@@ -3,7 +3,7 @@
 + Desenvolver uma APIREST com Item, Order e OrderItens CRUD (Create, Read, Update, Delete) utilizando Java/Spring
 
 + O exercício consiste em implementar um cadastro de produtos e serviços, possibilitando 
-+ também a emissão de pedidos de compra destes produtos e serviços.
+ também a emissão de pedidos de compra destes produtos e serviços.
 
 + Deverá ser desenvolvido um cadastro completo de pedido e itens do pedido 
 
